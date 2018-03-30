@@ -1,0 +1,25 @@
+section {
+  padding: 100px 0;
+
+  .row {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.bg-image {
+    @include bg-cover(center);
+    @include bg-overlay($black);
+  }
+
+  &.bg-image,
+  &.bg-blue,
+  &.bg-rose,
+  &.bg-black {
+    .title {
+      color: $white;
+    }
+  }
+}

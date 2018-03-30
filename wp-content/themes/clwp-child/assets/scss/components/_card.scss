@@ -1,0 +1,77 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -2%;
+
+  &:not(.cards-1) figure {
+    @include aspect-ratio(16,9);
+  }
+}
+
+.cards-1 .card {
+  display: flex;  
+  width: 100%;
+
+  figure {
+    height: 100%;
+    width: percentage(1/4);
+  }
+
+  .card-content {
+    width: percentage(3/4);
+  }
+}
+
+.cards-2 .card {
+  width: 49%;
+}
+
+.cards-3 .card {
+  width: 32%;
+}
+
+.cards-4 .card {
+  width: 24%;
+}
+
+.card {
+  margin-bottom: 2%;
+  box-shadow: 0 4px 14px 0 rgba($dark-gray, 0.2);
+
+  figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include bg-cover(center);
+
+    h3 {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+
+    &.bg-gradient,
+    &.bg-blue,
+    &.bg-teal,
+    &.bg-black {
+      color: $white;
+    }
+  }
+}
+
+.card-content {
+  padding: 20px;
+  background-color: $white;
+
+  h5 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  a {
+    margin: 0;
+  }
+}

@@ -1,0 +1,11 @@
+.cta {
+  text-align: center;
+
+  .button {
+    margin-bottom: 0;
+
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+}

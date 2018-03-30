@@ -1,0 +1,17 @@
+.image {
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.round {
+    border-radius: 50%;
+  }
+}
+
+.image-caption {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-style: italic;
+}

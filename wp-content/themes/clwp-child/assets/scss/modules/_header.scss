@@ -1,0 +1,23 @@
+header {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  transition: background-color ease .3s;
+
+  ul.nav a {
+    transition: color ease .3s;
+  }
+
+  &.is-fixed {
+    position: fixed;
+    background-color: $white;
+    box-shadow: 0 4px 14px 0 rgba($black, 0.1);
+
+    ul.nav a {
+      color: $black;
+    }
+  }
+}

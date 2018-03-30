@@ -1,0 +1,17 @@
+// creates background color classes
+@each $color in $colors {
+  .bg-#{nth($color, 1)} {
+    background-color: #{nth($color, 2)};
+  }
+}
+
+// creates color classes
+@each $color in $colors {
+  .#{nth($color, 1)} {
+    color: #{nth($color, 2)};
+  }
+}
+
+.text-center {
+  text-align: center;
+}
