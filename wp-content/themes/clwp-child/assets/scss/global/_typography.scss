@@ -6,4 +6,25 @@ h1,h2,h3,h4,h5,h6,p,li,a,button {
   letter-spacing: .15rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  sup {
+    font-size: 60%;
+  }
+}
+
+strong {
+  font-weight: $semibold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 19px;
+
+  &.p1 {
+    font-size: 14px;
+  }
+}
+
+a:not(.button) {
+  transition: color ease .3s;
 }

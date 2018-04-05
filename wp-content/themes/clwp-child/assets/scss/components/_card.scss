@@ -1,77 +1,60 @@
 .cards {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: -2%;
-
-  &:not(.cards-1) figure {
-    @include aspect-ratio(16,9);
-  }
-}
-
-.cards-1 .card {
-  display: flex;  
   width: 100%;
+  justify-content: center;
+  margin-bottom: -map-get($spacing, 3) !important; 
 
-  figure {
-    height: 100%;
-    width: percentage(1/4);
+  @include breakpoint(small down) {
+    margin-bottom: -map-get($spacing, 1);
   }
 
-  .card-content {
-    width: percentage(3/4);
+  .column {
+    margin-bottom: map-get($spacing, 3);
+
+    @include breakpoint(small down) {
+      margin-bottom: map-get($spacing, 1);
+    }
   }
-}
-
-.cards-2 .card {
-  width: 49%;
-}
-
-.cards-3 .card {
-  width: 32%;
-}
-
-.cards-4 .card {
-  width: 24%;
 }
 
 .card {
-  margin-bottom: 2%;
-  box-shadow: 0 4px 14px 0 rgba($dark-gray, 0.2);
+  position: relative;  
+  height: 100%;
+  background-color: $white;
+  border-radius: $global-radius;
+  border: 1px solid $medium-gray;  
+  box-shadow: 0 2px 4px 0 rgba($dark-gray, 0.1), 0 4px 20px 0 rgba($dark-gray, 0.2);
+  overflow: hidden;
+}
 
-  figure {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include bg-cover(center);
+.card figure {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include aspect-ratio(16, 9);
+  @include bg-cover(center);
+  background-color: $medium-gray;  
 
-    h3 {
-      margin-bottom: 0;
-      font-weight: 700;
-    }
-
-    &.bg-gradient,
-    &.bg-blue,
-    &.bg-teal,
-    &.bg-black {
-      color: $white;
-    }
+  img {
+    position: absolute;
+    max-width: 80%;
+    width: 100%;
   }
 }
 
 .card-content {
-  padding: 20px;
-  background-color: $white;
+  padding: map-get($spacing, 2) map-get($spacing, 2) map-get($spacing, 6);
 
-  h5 {
-    margin-bottom: 0;
+  h4 {
+    font-weight: $semibold;
   }
 
-  p {
-    margin: 5px 0;
-  }
-
-  a {
-    margin: 0;
+  .button {
+    position: absolute;
+    width: calc(100% - 40px);
+    bottom: map-get($spacing, 2);
+    left: map-get($spacing, 2);
   }
 }

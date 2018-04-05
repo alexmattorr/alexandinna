@@ -25,11 +25,12 @@ ul.nav {
         position: absolute;
         left: 0;
         width: 0;
-        border-bottom: 2px solid $blue;
+        border-bottom: 1px solid $blue;
         transition: .25s ease-in-out;
       }
       
       &:hover {
+        color: $blue;
         &:after {
           width: 100%;
         }

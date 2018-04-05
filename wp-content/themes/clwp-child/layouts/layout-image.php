@@ -5,8 +5,6 @@
   $attr = get_sub_field('attributes');
   $attr_classes = implode(" ", $attr);  
   $caption = get_sub_field('caption');
-
-
 ?>
 
 <div class="row">

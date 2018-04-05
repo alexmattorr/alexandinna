@@ -18,6 +18,8 @@
     while ( have_rows('layout') ) : the_row();
       if( get_row_layout() == 'cards' ):
         get_template_part('layouts/layout', 'cards');
+      elseif( get_row_layout() == 'cards_vert' ):
+        get_template_part('layouts/layout', 'cards-vert');
       elseif( get_row_layout() == 'content' ):
         get_template_part('layouts/layout', 'content');
       elseif( get_row_layout() == 'cta' ):

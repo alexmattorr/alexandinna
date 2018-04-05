@@ -1,0 +1,110 @@
+.cards-vert {
+  .column {
+    margin-bottom: map-get($spacing, 3);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(small down) {
+      margin-bottom: map-get($spacing, 1);
+    }
+  }
+}
+
+.card-vert {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid $medium-gray;
+  box-shadow: 0 2px 4px 0 rgba($dark-gray, 0.1), 0 4px 20px 0 rgba($dark-gray, 0.2);
+}
+
+.card-vert-elm {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: map-get($spacing, 2);
+
+  &:first-child {
+    width: 20%;
+    background-color: $blue;
+    text-align: center;
+
+    > div {
+      width: 100%;
+    }
+
+    @include breakpoint(small down) {
+      width: 30%;
+    }
+  }
+
+  &:last-child {
+    width: 80%;
+    background-color: $white;
+
+    @include breakpoint(small down) {
+      width: 70%;
+    }
+  }
+}
+
+.card-vert-text-wrap {
+  width: 75%;
+
+  @include breakpoint(small down) {
+    width: 100%;
+  }
+}
+
+.card-vert-day,
+.card-vert-month {
+  color: $white;
+  font-weight: $semibold;
+  text-transform: uppercase;
+}
+
+.card-vert-day {
+  font-size: 70px;
+  line-height: 50px;
+
+  @include breakpoint(small down) {
+    font-size: 45px;
+    line-height: 32px;
+  }
+}
+
+.card-vert-month {
+  margin-top: map-get($spacing, 1);
+  font-size: 24px;
+  line-height: 17px;
+
+  @include breakpoint(small down) {
+    font-size: 18px;
+    line-height: 14px;
+  }
+}
+
+.card-vert-title {
+  margin-bottom: 0;
+  @extend h4;
+  font-weight: $semibold;
+  text-transform: uppercase;
+}
+
+.card-vert-text {
+  color: $dark-gray;
+}
+
+.card-vert-time {
+  width: 25%;
+  color: $dark-gray;
+  font-weight: $semibold;
+  text-align: right;
+  text-transform: uppercase;
+
+  @include breakpoint(small down) {
+    width: 100%;
+    text-align: left;
+  }
+}

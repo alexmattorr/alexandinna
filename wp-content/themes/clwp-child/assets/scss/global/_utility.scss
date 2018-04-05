@@ -12,6 +12,30 @@
   }
 }
 
-.text-center {
-  text-align: center;
+// creates spacing classes
+@each $space in $spacing {
+  // margin spacing
+	.mt-#{nth($space, 1)} { margin-top: #{nth($space, 2)} !important; }
+	.mr-#{nth($space, 1)} { margin-right: #{nth($space, 2)} !important; }
+	.mb-#{nth($space, 1)} { margin-bottom: #{nth($space, 2)} !important; }
+	.ml-#{nth($space, 1)} { margin-left: #{nth($space, 2)} !important; }
+	.mbetween-#{nth($space, 1)} { margin: #{nth($space, 2)} auto !important; }
+  .m-#{nth($space, 1)} { margin: #{nth($space, 2)} !important; }
+  
+  // padding spacing
+	.pt-#{nth($space, 1)} { padding-top: #{nth($space, 2)} !important; }
+	.pr-#{nth($space, 1)} { padding-right: #{nth($space, 2)} !important; }
+	.pb-#{nth($space, 1)} { padding-bottom: #{nth($space, 2)} !important; }
+	.pl-#{nth($space, 1)} { padding-left: #{nth($space, 2)} !important; }
+	.pbetween-#{nth($space, 1)} { padding: #{nth($space, 2)} auto !important; }
+	.p-#{nth($space, 1)} { padding: #{nth($space, 2)} !important; }
 }
+
+.no-margin { margin: 0 !important; }
+
+.light { font-weight: $light; }
+.medium { font-weight: $medium; }
+.semibold { font-weight: $semibold; }
+
+.uppercase { text-transform: uppercase; }
+.text-center { text-align: center; }

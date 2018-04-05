@@ -57,18 +57,15 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 
 
-$blue: #a2bdbe;
-$rose: #cb9286;
-
+$blue: #007bff;
 $white: #FFFFFF;
-$light-gray: #f2f2f2;
-$medium-gray: #b3b3b3;
-$dark-gray: #989898;
+$light-gray: #f7f7f7;
+$medium-gray: #dfdfdf;
+$dark-gray: #6c757d;
 $black: #1c1c1c;
 
 $colors: (
   blue: $blue,
-  rose: $rose,
   white: $white,
   light-gray: $light-gray,
   medium-gray: $medium-gray,
@@ -78,7 +75,7 @@ $colors: (
 
 $foundation-palette: (
   primary: $blue,
-  secondary: $rose,
+  secondary: $blue,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
@@ -92,12 +89,23 @@ $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: 300;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 5px;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;
+
+$spacing: (
+  1: 10px,
+  2: 20px,
+  3: 30px,
+  4: 40px,
+  5: 50px,
+  6: 60px,
+  7: 70px,
+  8: 80px
+);
 
 // 2. Breakpoints
 // --------------
@@ -118,8 +126,8 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: map-get($spacing, 2),
+  medium: map-get($spacing, 3),
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
