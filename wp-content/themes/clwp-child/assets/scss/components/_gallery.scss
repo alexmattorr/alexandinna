@@ -22,7 +22,8 @@
   }
 
   .slick-slide {
-    height: 125px;  
+    height: 125px;
+    outline: none;
     cursor: pointer;
 
     @include breakpoint(small down) {
