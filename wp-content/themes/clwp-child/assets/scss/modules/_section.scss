@@ -1,3 +1,15 @@
+.max-container {
+  margin: 0 auto;
+  width: 100%;  
+  max-width: map-get($breakpoints, xxlarge);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;  
+  max-width: $global-width;
+}
+
 section {
   padding: map-get($spacing, 8) 0;
 
@@ -10,6 +22,10 @@ section {
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include breakpoint(small down) {
+      margin-bottom: map-get($spacing, 3);
     }
   }
 

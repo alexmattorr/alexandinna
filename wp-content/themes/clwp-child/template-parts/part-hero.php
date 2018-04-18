@@ -1,4 +1,7 @@
 <?php
+  $show = get_field('show_hero');
+  if($show === 'true') :
+
   $feat_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' )[0];
   $bg_image = 'style="background-image: url(' . $feat_image . ')"';
   $headline = get_field('headline');
@@ -62,4 +65,7 @@
   ?>
 </div>
 
-<?php } ?>
+<?php 
+  } 
+  endif;
+?>

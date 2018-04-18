@@ -53,7 +53,7 @@
       </div>
     </header>
 
-    <?php 
-      get_template_part('template-parts/part', 'hero');
+    <?php
+      get_template_part('template-parts/part', 'hero');    
       do_action('clwp_after_header'); 
     ?>

@@ -18,6 +18,37 @@
   }
 }
 
+.mobile-cards-slider.slick-slider {
+  .slick-list {
+    padding: 0 20px !important;
+  }
+
+  .slick-track {
+    padding-bottom: 40px;
+  }
+
+  .slick-slide > div {
+    padding: 0 5px;
+  }
+
+  .column {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .slick-dots {
+    bottom: 8px;
+
+    li {
+      border-color: $dark-gray;
+
+      &.slick-active {
+        background-color: $dark-gray;
+      }
+    }
+  }
+}
+
 .card {
   position: relative;  
   height: 100%;

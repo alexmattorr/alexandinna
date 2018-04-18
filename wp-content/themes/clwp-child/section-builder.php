@@ -3,14 +3,15 @@
     while ( have_rows('sections') ) : the_row();
       $bg_type = get_sub_field('background_type');
       $bg_color = get_sub_field('background_color');
+      $remove_padding = get_sub_field('remove_padding');      
       $bg_image = get_sub_field('background_image')['url'];
       $bg_image_string = 'style="background-image: url(' . $bg_image . ')"';
 ?>
 
 <?php if($bg_type === 'image') { ?>
-<section class="<?= $bg_color; ?> bg-image" <?= $bg_image_string; ?>>
+<section class="<?php echo $bg_color; if($remove_padding === 'true') { echo ' no-padding'; } ?> bg-image" <?= $bg_image_string; ?>>
 <?php } else { ?>
-<section class="<?= $bg_color ?>">
+<section class="<?php echo $bg_color; if($remove_padding === 'true') { echo ' no-padding'; } ?>">
 <?php } ?>
 
 <?php
@@ -24,6 +25,8 @@
         get_template_part('layouts/layout', 'content');
       elseif( get_row_layout() == 'cta' ):
         get_template_part('layouts/layout', 'cta');
+      elseif( get_row_layout() == 'gallery' ):
+        get_template_part('layouts/layout', 'gallery');     
       elseif( get_row_layout() == 'image' ):
         get_template_part('layouts/layout', 'image');
       elseif( get_row_layout() == 'title' ):

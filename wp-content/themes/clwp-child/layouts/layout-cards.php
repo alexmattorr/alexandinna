@@ -1,5 +1,7 @@
+<?php $mobile_carousel = get_sub_field('mobile_carousel'); ?>
+
 <div class="row">
-  <div class="cards">
+  <div class="cards<?php if($mobile_carousel === 'true') { echo ' mobile-cards-slider'; } ?>">
     <?php
       if( have_rows('card') ):
         while ( have_rows('card') ) : the_row();
