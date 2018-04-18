@@ -21,10 +21,8 @@
 .card {
   position: relative;  
   height: 100%;
-  background-color: $white;
-  border-radius: $global-radius;
-  border: 1px solid $medium-gray;  
   box-shadow: 0 2px 4px 0 rgba($dark-gray, 0.1), 0 4px 20px 0 rgba($dark-gray, 0.2);
+  border-radius: $global-radius;
   overflow: hidden;
 }
 
@@ -35,7 +33,7 @@
   justify-content: center;
   @include aspect-ratio(16, 9);
   @include bg-cover(center);
-  background-color: $medium-gray;  
+  background-color: $medium-gray;
 
   img {
     position: absolute;
@@ -46,6 +44,14 @@
 
 .card-content {
   padding: map-get($spacing, 2) map-get($spacing, 2) map-get($spacing, 6);
+  height: 100%;
+  background-color: $white;
+  border: 1px solid $medium-gray;
+  border-top: none;
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+  overflow: hidden;
+  box-sizing: border-box;
 
   h4 {
     font-weight: $semibold;
