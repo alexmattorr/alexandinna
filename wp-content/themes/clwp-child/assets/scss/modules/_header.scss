@@ -20,4 +20,20 @@ header {
       color: $black;
     }
   }
+
+  &.desktop-header {
+    display: block;
+
+    @include breakpoint(medium down) {
+      display: none !important;
+    }
+  }
+
+  &.mobile-header {
+    display: none;
+
+    @include breakpoint(medium down) {
+      display: block !important;
+    }
+  }
 }

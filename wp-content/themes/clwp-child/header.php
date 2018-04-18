@@ -14,12 +14,12 @@
     do_action( 'clwp_layout_start' );
   ?>
 
-  <div class="max-container">
-    
-    <header>
-      <div class="row">
-        <ul class="nav column">
-        <?php
+    <div class="max-container">
+
+      <header class="desktop-header">
+        <div class="row">
+          <ul class="desktop-nav nav column">
+            <?php
           $menu_options = array(
             'post_type' => 'global',
             'p' => 204
@@ -49,11 +49,50 @@
           endwhile;
           wp_reset_query();
         ?>
+          </ul>
+        </div>
+      </header>
+
+      <header class="mobile-header">
+        <div class="row">
+          <div class="column">
+            <div class="nav-open">open</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="mobile-nav-wrap">
+        <div class="mobile-nav-close-wrap">
+          <div class="nav-close">close</div>
+        </div>
+        <ul class="mobile-nav nav">
+          <li>
+            <?php get_template_part('template-parts/part', 'logo'); ?>
+          </li>
+          <?php
+          $menu_options = array(
+            'post_type' => 'global',
+            'p' => 204
+          );
+          $wp_menu_query = new WP_Query($menu_options);
+          while ($wp_menu_query->have_posts()) : $wp_menu_query->the_post();
+            if( have_rows('menu_item') ):
+              $total_items = sizeof(get_field('menu_item')) / 2;
+              while ( have_rows('menu_item') ) : the_row();
+                $link = get_sub_field('link');
+                $label = $link['title'];
+                $link = $link['url'];
+                $target = get_sub_field('link')['target'];
+                echo '<li><a href="' . $link . '" target="' . $target . '">' . $label . '</a></li>';
+              endwhile; 
+            endif;
+          endwhile;
+          wp_reset_query();
+        ?>
         </ul>
       </div>
-    </header>
 
-    <?php
+      <?php
       get_template_part('template-parts/part', 'hero');    
       do_action('clwp_after_header'); 
     ?>
