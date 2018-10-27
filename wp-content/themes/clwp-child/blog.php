@@ -37,5 +37,6 @@
 </section>
 <?php
     wp_reset_query();
+    include 'section-builder.php';
   get_footer();
 ?>

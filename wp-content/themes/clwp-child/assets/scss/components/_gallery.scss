@@ -9,6 +9,10 @@
     @include aspect-ratio(16,9);
     @include bg-cover(center);   
     max-height: 75vh; 
+
+    @include breakpoint(medium down) {
+      height: 60vh;
+    }
   }
 }
 

@@ -7,28 +7,32 @@
   text-transform: uppercase;
   border: 1px solid transparent;
   border-radius: $global-radius;
+  transition: background-color ease .3s, border ease .3s;
 
   &.primary {
-    background-color: $blue;
+    background-color: $dark-blue;
     color: $white;
-    border-color: $blue;
-    transition: background-color ease .3s, border ease .3s;
 
     &:hover {
-      background-color: darken($blue, 5%);
-      border-color: darken($blue, 5%);
+      background-color: darken($dark-blue, 5%);
     }
   }
 
-  &.outline {
-    background-color: $white;
-    color: $blue;
-    border-color: $blue;
-    transition: background-color ease .3s, color ease .3s, border ease .3s;
+  &.secondary {
+    background-color: $rose;
+    color: $white;
+
     &:hover {
-      background-color: darken($blue, 5%);
-      color: $white;
-      border-color: darken($blue, 5%);
+      background-color: darken($rose, 5%);
+    }
+  }
+
+  &.tertiary {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+      background-color: darken($white, 5%);
     }
   }
 }

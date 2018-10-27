@@ -3,7 +3,7 @@
     toggleOpen: function() {
       var menu = $('.mobile-nav-wrap'),
           openBtn = $('.nav-open'),
-          closeBtn = $('.nav-close'),
+          closeBtn = $('.mobile-nav-close-wrap'),
           open = 'is-open',
           timing = 150;
 

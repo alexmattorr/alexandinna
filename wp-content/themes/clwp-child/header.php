@@ -56,14 +56,18 @@
       <header class="mobile-header">
         <div class="row">
           <div class="column">
-            <div class="nav-open">open</div>
+            <div class="nav-open">
+              <?php include( get_stylesheet_directory() . '/assets/images/icons/menu.svg' ); ?>
+            </div>
           </div>
         </div>
       </header>
 
       <div class="mobile-nav-wrap">
         <div class="mobile-nav-close-wrap">
-          <div class="nav-close">close</div>
+          <div class="nav-close">
+            <?php include( get_stylesheet_directory() . '/assets/images/icons/close.svg' ); ?>
+          </div>
         </div>
         <ul class="mobile-nav nav">
           <li>

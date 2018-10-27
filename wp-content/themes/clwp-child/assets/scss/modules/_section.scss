@@ -2,6 +2,7 @@
   margin: 0 auto;
   width: 100%;  
   max-width: map-get($breakpoints, xxlarge);
+  overflow: hidden;
 }
 
 .container {
@@ -35,11 +36,29 @@ section {
   }
 
   &.bg-image,
-  &.bg-blue,
+  &.bg-dark-blue,
+  &.bg-medium-blue,
   &.bg-rose,
   &.bg-black {
     .title {
       color: $white;
+    }
+  }
+
+  &.fixed {
+    height: 60vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+    
+    @supports (-webkit-overflow-scrolling: touch) {
+      background-attachment: unset;
+    }
+
+    @include breakpoint(medium down) {
+      height: 30vh;
+      background-attachment: unset;
     }
   }
 }

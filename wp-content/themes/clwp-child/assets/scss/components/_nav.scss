@@ -32,12 +32,12 @@ ul.desktop-nav {
         position: absolute;
         left: 0;
         width: 0;
-        border-bottom: 1px solid $blue;
+        // border-bottom: 1px solid $blue;
         transition: .25s ease-in-out;
       }
       
       &:hover {
-        color: $blue;
+        // color: $blue;
         &:after {
           width: 100%;
         }
@@ -79,7 +79,7 @@ ul.mobile-nav {
 
   a {
     display: block;
-    padding: 10px;
+    padding: 20px 10px;
     width: 100%;
     color: $black;
   }
@@ -96,7 +96,21 @@ ul.mobile-nav {
   height: 100%;
 }
 
+.nav-close,
+.nav-open {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  path {
+    fill: $white;
+  }
+}
+
 .nav-close {
   position: absolute;
-  color: $white; // remove when svg is added;
 }

@@ -5,7 +5,8 @@ header {
   left: 0;
   width: 100%;
   padding: 10px 0;
-  transition: background-color ease .3s;
+  background: linear-gradient(rgba($black, 0.5), transparent);
+  transition: background ease .3s;
 
   ul.nav a {
     transition: color ease .3s;
@@ -13,11 +14,15 @@ header {
 
   &.is-fixed {
     position: fixed;
-    background-color: $white;
+    background: $white;
     box-shadow: 0 4px 14px 0 rgba($black, 0.1);
 
     ul.nav a {
       color: $black;
+    }
+
+    .nav-open path {
+      fill: $black;
     }
   }
 

@@ -5,11 +5,12 @@
       $bg_color = get_sub_field('background_color');
       $remove_padding = get_sub_field('remove_padding');      
       $bg_image = get_sub_field('background_image')['url'];
+      $bg_fixed = get_sub_field('background_fixed');
       $bg_image_string = 'style="background-image: url(' . $bg_image . ')"';
 ?>
 
 <?php if($bg_type === 'image') { ?>
-<section class="<?php echo $bg_color; if($remove_padding === 'true') { echo ' no-padding'; } ?> bg-image" <?= $bg_image_string; ?>>
+<section class="<?php echo $bg_color; if($remove_padding === 'true') { echo ' no-padding'; } if($bg_fixed === 'true') { echo ' fixed'; } ?> bg-image" <?= $bg_image_string; ?>>
 <?php } else { ?>
 <section class="<?php echo $bg_color; if($remove_padding === 'true') { echo ' no-padding'; } ?>">
 <?php } ?>
